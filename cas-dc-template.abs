@@ -1,0 +1,9 @@
+judder in plate clutch in MBS simulation. characteristic of plate clutch and relevant dynamic phenomenon: many contacts, surface deviations after production.
+
+\noindent\texttt{\textbackslash begin{abstract}} \dots
+\texttt{\textbackslash end{abstract}} and
+\verb+\begin{keyword}+ \verb+...+ \verb+\end{keyword}+
+which
+contain the abstract and keywords respectively.
+
+\noindent Each keyword shall be separated by a \verb+\sep+ command.

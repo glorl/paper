@@ -1,0 +1,153 @@
+\begin{thebibliography}{19}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Inproceedings
+\bibitem[{Albers and Herbst(1998)}]{albers1998Rupfen}
+\bibinfo{author}{Albers, A.}, \bibinfo{author}{Herbst, D.},
+  \bibinfo{year}{1998}.
+\newblock \bibinfo{title}{{Rupfen - Ursachen und Abhilfen}}, in:
+  \bibinfo{booktitle}{{LuK for the best connection in comfort and economy - 6.
+  LuK-Kolloquium, 19./20.03.1998}}, \bibinfo{publisher}{{LuK}}. pp.
+  \bibinfo{pages}{23--46}.
+%Type = Article
+\bibitem[{Centea et~al.(2001)Centea, Rahnejat and Menday}]{centea2001non}
+\bibinfo{author}{Centea, D.}, \bibinfo{author}{Rahnejat, H.},
+  \bibinfo{author}{Menday, M.}, \bibinfo{year}{2001}.
+\newblock \bibinfo{title}{Non-linear multi-body dynamic analysis for the study
+  of clutch torsional vibrations (judder)}.
+\newblock \bibinfo{journal}{Applied Mathematical Modelling}
+  \bibinfo{volume}{25}, \bibinfo{pages}{177--192}.
+%Type = Book
+\bibitem[{Dresig and Fidlin(2014)}]{dresig2014schwingungen}
+\bibinfo{author}{Dresig, H.}, \bibinfo{author}{Fidlin, A.},
+  \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{Schwingungen mechanischer Antriebssysteme:
+  Modellbildung, Berechnung, Analyse, Synthese}.
+\newblock \bibinfo{publisher}{Springer-Verlag}.
+%Type = Inproceedings
+\bibitem[{Drexl(1990)}]{drexl1990clutch}
+\bibinfo{author}{Drexl, H.}, \bibinfo{year}{1990}.
+\newblock \bibinfo{title}{Clutch judder: causes and countermeasures}, in:
+  \bibinfo{booktitle}{Proceedings of Technical Conference SITEV}, pp.
+  \bibinfo{pages}{7--46}.
+%Type = Article
+\bibitem[{Fidlin et~al.(2011)Fidlin, Drozdetskaya and
+  Waltersberger}]{fidlin2011minimal}
+\bibinfo{author}{Fidlin, A.}, \bibinfo{author}{Drozdetskaya, O.},
+  \bibinfo{author}{Waltersberger, B.}, \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{On the minimal model for the low frequency wobbling
+  instability of friction discs}.
+\newblock \bibinfo{journal}{European Journal of Mechanics-A/Solids}
+  \bibinfo{volume}{30}, \bibinfo{pages}{665--672}.
+%Type = Inproceedings
+\bibitem[{Gregori et~al.(2014)Gregori, Thomaz and Martins}]{gregori2014Judder}
+\bibinfo{author}{Gregori, I.R.S.}, \bibinfo{author}{Thomaz, C.E.},
+  \bibinfo{author}{Martins, C.G.}, \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{Multivariate judder behavior analysis of dry clutches
+  based on torque signal and friction material}, in: \bibinfo{booktitle}{2014
+  IEEE Vehicle Power and Propulsion Conference (VPPC)}, pp.
+  \bibinfo{pages}{1--5}.
+\newblock \DOIprefix\doi{10.1109/VPPC.2014.7007108}.
+%Type = Article
+\bibitem[{Hausner and Haessler(2012)}]{hausner2012Judder}
+\bibinfo{author}{Hausner, M.}, \bibinfo{author}{Haessler, M.},
+  \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{Clutch disc with frequency damper to prevent judder
+  vibrations}.
+\newblock \bibinfo{journal}{Automobiltechnische Zeitschrift}
+  \bibinfo{volume}{114}, \bibinfo{pages}{43--47}.
+%Type = Article
+\bibitem[{Hetzler(2009)}]{hetzler2009moving}
+\bibinfo{author}{Hetzler, H.}, \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{On moving continua with contacts and sliding
+  friction: Modeling, general properties and examples}.
+\newblock \bibinfo{journal}{International Journal of Solids and Structures}
+  \bibinfo{volume}{46}, \bibinfo{pages}{2556--2570}.
+%Type = Book
+\bibitem[{Hinrichs(1997)}]{hinrichs1997reibungsschwingungen}
+\bibinfo{author}{Hinrichs, N.}, \bibinfo{year}{1997}.
+\newblock \bibinfo{title}{{Reibungsschwingungen mit Selbst-und Fremderregung:
+  Experiment, Modellierung und Berechnung}}.
+\newblock \bibinfo{publisher}{VDI-Verlag}.
+%Type = Phdthesis
+\bibitem[{Ingram(2010)}]{ingram2010Clutch}
+\bibinfo{author}{Ingram, M.P.}, \bibinfo{year}{2010}.
+\newblock \bibinfo{title}{The Mechanisms of Wet Clutch Friction Behaviour}.
+\newblock Ph.D. thesis. Imperial College London.
+%Type = Article
+\bibitem[{Jacobsson(2003)}]{jacobsson2003Aspects}
+\bibinfo{author}{Jacobsson, H.}, \bibinfo{year}{2003}.
+\newblock \bibinfo{title}{Aspects of disc brake judder}.
+\newblock \bibinfo{journal}{Proceedings of the Institution of Mechanical
+  Engineers, Part D: Journal of Automobile Engineering} \bibinfo{volume}{217},
+  \bibinfo{pages}{419 -- 430}.
+%Type = Inproceedings
+\bibitem[{Jahagirdar et~al.(2007)Jahagirdar, Gehaney, Gupta and
+  Deshpande}]{jahagirdar2007Judder}
+\bibinfo{author}{Jahagirdar, A.}, \bibinfo{author}{Gehaney, R.},
+  \bibinfo{author}{Gupta, P.}, \bibinfo{author}{Deshpande, S.},
+  \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{Probability considerations in design case study-
+  analysis of multi plate wet clutch for judder and rattling}, in:
+  \bibinfo{booktitle}{Symposium on International Automotive Technology}, pp.
+  \bibinfo{pages}{753--760}.
+\newblock \bibinfo{note}{SAE Technical Paper No. 2007-26-069}.
+%Type = Inproceedings
+\bibitem[{Jehle et~al.(2016)Jehle, Drozdetskaya and Fidlin}]{jehle2016flexible}
+\bibinfo{author}{Jehle, G.}, \bibinfo{author}{Drozdetskaya, O.},
+  \bibinfo{author}{Fidlin, A.}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{Nonlinear dynamics of gearoxes with flexible friction
+  clutch}, in: \bibinfo{booktitle}{Proc. of ICTAM}.
+%Type = Article
+\bibitem[{Jehle and Fidlin(2018)}]{jehle2018nonlinear}
+\bibinfo{author}{Jehle, G.}, \bibinfo{author}{Fidlin, A.},
+  \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{On the nonlinear dynamics of shift gearbox models}.
+\newblock \bibinfo{journal}{Acta Mechanica} \bibinfo{volume}{229},
+  \bibinfo{pages}{2327--2341}.
+%Type = Book
+\bibitem[{Kauderer(1958)}]{kauderer1958nichtlineare}
+\bibinfo{author}{Kauderer, H.}, \bibinfo{year}{1958}.
+\newblock \bibinfo{title}{Nichtlineare Mechanik \textit{(Nonlinear
+  mechanics)}}.
+\newblock \bibinfo{publisher}{Springer-Verlag Berlin G\"{o}ttingen Heidelberg}.
+%Type = Book
+\bibitem[{Klement(2011)}]{klement2011Fahrzeug}
+\bibinfo{author}{Klement, W.}, \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{Fahrzeuggetriebe}.
+\newblock \bibinfo{publisher}{Carl Hanser Verlag M\"{u}nchen}.
+%Type = Article
+\bibitem[{Vielsack(1996)}]{vielsack1996regularisierung}
+\bibinfo{author}{Vielsack, P.}, \bibinfo{year}{1996}.
+\newblock \bibinfo{title}{{Regularisierung des Haftzustandes bei Coulombscher
+  Reibung}}.
+\newblock \bibinfo{journal}{ZAMM-Journal of Applied Mathematics and
+  Mechanics/Zeitschrift f{\"u}r Angewandte Mathematik und Mechanik}
+  \bibinfo{volume}{76}, \bibinfo{pages}{439--446}.
+%Type = Article
+\bibitem[{Wickramarachi et~al.(2005)Wickramarachi, Singh and
+  Bailey}]{wickramarachi2005analysis}
+\bibinfo{author}{Wickramarachi, P.}, \bibinfo{author}{Singh, R.},
+  \bibinfo{author}{Bailey, G.}, \bibinfo{year}{2005}.
+\newblock \bibinfo{title}{Analysis of friction-induced vibration leading to
+  "eek" noise in a dry friction clutch}.
+\newblock \bibinfo{journal}{{Noise Control Engineering Journal}}
+  \bibinfo{volume}{53}, \bibinfo{pages}{138--144}.
+%Type = Book
+\bibitem[{Willner(2013)}]{willner2013kontinuums}
+\bibinfo{author}{Willner, K.}, \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{Kontinuums- und Kontaktmechanik: Synthetische und
+  analytische Darstellung}.
+\newblock \bibinfo{publisher}{Springer-Verlag}.
+
+\end{thebibliography}
