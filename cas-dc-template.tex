@@ -40,8 +40,8 @@
 \let\WriteBookmarks\relax
 \def\floatpagepagefraction{1}
 \def\textpagefraction{.001}
-\shorttitle{Regarding geometric judder in multiplate clutch systems}
-\shortauthors{CV Radhakrishnan et~al.}
+\shorttitle{Considerations regarding geometric judder in multiplate clutch systems}
+\shortauthors{G Jehle et~al.}
 
 \title [mode = title]{Considerations regarding geometric judder in multiplate clutch systems}                      
 %\tnotemark[1,2]
@@ -55,7 +55,7 @@
 
 
 
-\author[1,3]{Georg Jehle}[type=editor,
+\author[1]{Georg Jehle}[type=editor,
                         % auid=000,bioid=1,
                         % prefix=Sir,
                         % role=Researcher,
@@ -70,6 +70,7 @@
 \address[1]{Schaeffler Automotive Buehl GmbH \& Co. KG, Industriestr. 2, Bühl, Germany}
 
 \author[2]{Chellappam Vigneshwar Manickam}[]
+\author[1]{Christian Denda}[]
 
 \author[3]{Mingan Jiang}[%
    % role=Co-ordinator,
@@ -77,7 +78,7 @@
    % suffix=Jr,
    ]
 %\fnmark[2]
-\ead{jiang@schaeffler.com}
+%\ead{jiang@schaeffler.com}
 %\ead[URL]{www.sayahna.org}
 
 \credit{Data curation, Writing - Original draft preparation}
@@ -87,7 +88,7 @@
 \author[1]{Achim Seifermann}
 %\cormark[2]
 %\fnmark[1,3]
-\ead{achim.seifermann@schaeffler.com}
+%\ead{achim.seifermann@schaeffler.com}
 %\ead[URL]{www.stmdocs.in}
 
 \address[3]{Schaeffler China., Anting,
@@ -138,7 +139,7 @@ automotive multiplate clutch \sep contact mechanics \sep stochastic mechanics
 
 \section{Introduction}
 Cost savings in automotive industry, consequences from production deficiencies, vibration phenomena elimination. Different vibration phenomena lead to increased costs. Criterion at end of line testing with clear thrash limits. Avoid driver complaints. \\
-Acoustic problems due to follower loads of the sliding contact can originate e.g. from the wobbling Eigenmode \cite{fidlin2011minimal,wickramarachi2005analysis}, clutch-gear-interaction \cite{jehle2018nonlinear}, elasticity of the contact surface \cite{hetzler2009moving,jehle2016flexible}. Here: the low-frequency torsional vibration problem adressed, also called judder \cite{klement2011Fahrzeug}.\\
+Vibration/acoustic problems due to follower loads of the sliding contact can originate e.g. from the wobbling Eigenmode \cite{fidlin2011minimal,wickramarachi2005analysis}, clutch-gear-interaction \cite{jehle2018nonlinear}, elasticity of the contact surface \cite{hetzler2009moving,jehle2016flexible}. Here: the low-frequency torsional vibration problem adressed, also called judder \cite{klement2011Fahrzeug}.\\
 Three types of judder can be distinguished, namely, friction induced, pressure induced, geometrically induced \cite{drexl1990clutch}. All have in common: in sliding phase (launch, shift). It lead to torsional vibrations at low frequency which can be critical regarding drivetrain resonance and be felt by driver. 
 Friction induced: sliding friction coefficient's speed dependency \cite{hinrichs1997reibungsschwingungen,kauderer1958nichtlineare}, negative gradient, negative contribution to damping. This is an instability. Pressure induced: whenever actuation piston vibrates axially, it modifies the torque, thus, torsional vibrations. External excitation. 
 Geometric excitation: geometrical deviations of the sliding surfaces modulate the local normal pressure, then local frictional torque is modified. In this paper adressed. Nature of the problem: external excitation, and it is impossible to extinct it. Only reduce.(surfaces never flat because of production). The less surface deviations and the better the material homogenity (i.e., high production quality), the less vibration excitation. \\
@@ -221,7 +222,7 @@ Result is the integral (sum) of all contact forces on the distributed contact.
 & t = \sum r_{f,i}\times \left(f_n + f_t\right)
 \end{align}
 \subsection{MBS}
-Finally, dynamic system equations are obtained in a MBS implementation. The model structure is as follows: 
+Finally, dynamic system equations are obtained in a MBS implementation according to the design (Figs. \ref{fig:design},\ref{fig:teeth},\ref{fig:roughsurf}). The model structure is as follows: 
 4 friction plates (pad friction, tooth friction),
 5 steel plates (pad friction, tooth friction), 
 piston, 
@@ -229,14 +230,39 @@ opc
 Piston has tilting DoF and given axial displacement 
 Set of equations has the following structure 
 \begin{align}
-	&{M}\ddot{{q}} + f_{ij}(q) = 0\\
+	&{M}\ddot{{q}}_{ij} + f_{ij}(q_{ij}) = 0\\
 	&{M}\ddot{{q}} + f_{ij}(q) = 0
 \end{align}
+Boundary conditions. piston is pushed in axial direction by hydraulics. close to displacement boundary condition (elasticity of oil reservoir much higher than plates elasticity).
+\section{Verification with measurements}
+Clear: single simulation not reasonable. Many simulations because of spread and because many parameters can't be measured, are random. \\
+stochastic influences from surface distributions are obvious. Main randomness contributors: plate mount orientation (normal distribution), initial conditions (Gaussisan distribution), friction coefficient (Gaussian distribution). In addition, material inhomogeneity, ... \\
+\begin{figure}
+	\centering
+	\includegraphics[scale=.75]{figs/Fig1.pdf}
+	\caption{measured surface distributions and harmonic interpolation.}
+	\label{fig:surfdist}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[scale=.75]{figs/Fig1.pdf}
+	\caption{IC influence. Time domain and frequency domain. }
+	\label{fig:IC}
+\end{figure}
+Proof: result is a random variables. \\
+\begin{figure}
+\centering
+\includegraphics[scale=.75]{figs/Fig1.pdf}
+\caption{Matching + IC influence. Sort according to different components.}
+\label{fig:matching}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=.75]{figs/Fig1.pdf}
+\caption{Full parametric simulation. Parameter influences.}
+\label{fig:full parametric}
+\end{figure}\\
 
-\subsection{Boundary conditions}
-particular role: piston boundary condition 
-\section{Simulation settings}
-stochastic influences from surface distributions are obvious. Main randomness contributors: plate mount orientation, initial conditions, friction coefficient. In addition, material inhomogeneity, ... \\
 2 surface data samples. According to tests, the first part of good clutch, the second bad clutch. Reproduce this difference is part of model verification. \\
 
 according, simulation setup: 
@@ -302,7 +328,6 @@ which is part of any standard \LaTeX{} distribution.
 the postscript format while pdf\LaTeX{} accepts {*.pdf},
 {*.mps} (metapost), {*.jpg} and {*.png} formats. 
 pdf\LaTeX{} does not accept graphic files in the postscript format. 
-
 \begin{figure}
 	\centering
 		\includegraphics[scale=.75]{figs/Fig1.pdf}
