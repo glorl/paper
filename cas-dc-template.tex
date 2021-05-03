@@ -244,7 +244,7 @@ stochastic influences from surface distributions are obvious. Main randomness co
 \begin{figure}
 	\centering
 \begin{tikzpicture}[scale=1]
-\begin{axis}[xlabel=$\varphi$,ylabel=$d$ ($\mu$m) ,
+\begin{axis}[xlabel=$\varphi$,ylabel=$\Delta d$ ($\mu$m) ,
 scale = 0.43,
 width=\textwidth,
 xtick={0,0.5,1}, grid=major,
@@ -252,11 +252,13 @@ xticklabels={0,$\pi$,$2\pi$},
 every axis y label/.style={at={(-0.2,0.5)},rotate=90}, 
 every axis x label/.style={at={(0.5,-0.15)}},
 xmin=0,xmax=1,
+ymin=-60,ymax=60,
 %height = 1.0\textwidth,
 %legend style={at={(0.15,0.03)},anchor=south west}, 
 %legend cell align=left, 
 ]
 \addplot[] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{1})*1000] {ASCII/goodclutchk2.txt};
+\addplot[] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{3})*1000] {ASCII/goodclutchk2.txt};
 \addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{5}-2)*1000] {ASCII/goodclutchk2.txt};
 \addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{6}-2)*1000] {ASCII/goodclutchk2.txt};
 \addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{7}-2)*1000] {ASCII/goodclutchk2.txt};
@@ -269,13 +271,13 @@ xmin=0,xmax=1,
 %%\legend{}
 \end{axis}
 \end{tikzpicture}
-	\caption{measured surface distributions (good clutch).}
+	\caption{measured surface deviations in contacts at OPC, separator plates, friction plates and piston (good clutch).}
 	\label{fig:goodsurfdist}
 \end{figure}
 \begin{figure}
 	\centering
 	\begin{tikzpicture}[scale=1]
-	\begin{axis}[xlabel=$\varphi$,ylabel=$d$ ($\mu$m) ,
+	\begin{axis}[xlabel=$\varphi$,ylabel=$\Delta d$ ($\mu$m) ,
 	scale = 0.43,
 	width=\textwidth,
 	xtick={0,0.5,1}, grid=major,
@@ -283,11 +285,13 @@ xmin=0,xmax=1,
 	every axis y label/.style={at={(-0.2,0.5)},rotate=90}, 
 	every axis x label/.style={at={(0.5,-0.15)}},
 	xmin=0,xmax=1,
+	ymin=-60,ymax=60,
 	%height = 1.0\textwidth,
 	%legend style={at={(0.15,0.03)},anchor=south west}, 
 	%legend cell align=left, 
 	]
 	\addplot[] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{1})*1000] {ASCII/badclutchk2.txt};
+	\addplot[] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{3})*1000] {ASCII/badclutchk2.txt};
 	\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{5}-2)*1000] {ASCII/badclutchk2.txt};
 	\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{6}-2)*1000] {ASCII/badclutchk2.txt};
 	\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{7}-2)*1000] {ASCII/badclutchk2.txt};
@@ -300,7 +304,7 @@ xmin=0,xmax=1,
 	%%\legend{}
 	\end{axis}
 	\end{tikzpicture}
-	\caption{measured surface distributions (bad clutch).}
+	\caption{measured surface deviations in contacts at OPC, separator plates, friction plates and piston (bad clutch).}
 	\label{fig:badsurfdist}
 \end{figure}
 \begin{figure}
