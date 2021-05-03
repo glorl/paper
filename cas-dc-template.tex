@@ -25,6 +25,10 @@
 %\usepackage[authoryear,longnamesfirst]{natbib}
 %\usepackage[authoryear]{natbib}
 \usepackage[numbers]{natbib}
+\usepackage{tikz,pgfplots}
+\usepgfplotslibrary{external}
+\tikzexternalize[prefix=figs/, shell escape=-enable-write18]
+\usetikzlibrary{pgfplots.groupplots}
 
 %%%Author definitions
 \def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
@@ -252,7 +256,24 @@ stochastic influences from surface distributions are obvious. Main randomness co
 Proof: result is a random variables. \\
 \begin{figure}
 \centering
-\includegraphics[scale=.75]{figs/Fig1.pdf}
+		\begin{tikzpicture}[scale=1]
+\begin{axis}[xlabel=$\varphi_{piston}$,ylabel=$T$ ,
+scale = 0.43,
+width=\textwidth,
+xtick={0,0.5,1}, grid=major,
+xticklabels={0,$\pi$,$2\pi$},
+every axis y label/.style={at={(-0.2,0.5)},rotate=90}, 
+every axis x label/.style={at={(0.5,-0.15)}},
+%xmin=0,xmax=7,
+%height = 1.0\textwidth,
+%legend style={at={(0.15,0.03)},anchor=south west}, 
+%legend cell align=left, 
+]
+\addplot[color=black,only marks,mark=*,mark size=0.6] table[x expr=\thisrowno{8}/2/pi,y expr=\thisrowno{0}] {ASCII/RandomIcMount2000.txt};
+\addplot[color=red,only marks,mark=*,mark size=0.6] table[x expr=\thisrowno{8}/2/pi,y expr=\thisrowno{1}] {ASCII/RandomIcMount2000.txt};
+%\legend{}
+\end{axis}
+\end{tikzpicture}
 \caption{Matching + IC influence. Sort according to different components.}
 \label{fig:matching}
 \end{figure}
