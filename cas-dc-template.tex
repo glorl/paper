@@ -244,25 +244,64 @@ stochastic influences from surface distributions are obvious. Main randomness co
 \begin{figure}
 	\centering
 \begin{tikzpicture}[scale=1]
-\begin{axis}[xlabel=$\varphi_{piston}$,ylabel=$T$ ,
+\begin{axis}[xlabel=$\varphi$,ylabel=$d$ ($\mu$m) ,
 scale = 0.43,
 width=\textwidth,
 xtick={0,0.5,1}, grid=major,
 xticklabels={0,$\pi$,$2\pi$},
 every axis y label/.style={at={(-0.2,0.5)},rotate=90}, 
 every axis x label/.style={at={(0.5,-0.15)}},
-%xmin=0,xmax=7,
+xmin=0,xmax=1,
 %height = 1.0\textwidth,
 %legend style={at={(0.15,0.03)},anchor=south west}, 
 %legend cell align=left, 
 ]
-\addplot[color=black,only marks,mark=*,mark size=0.6] table[x expr=\thisrowno{8}/2/pi,y expr=\thisrowno{0}] {ASCII/RandomIcMount2000.txt};
-\addplot[color=red,only marks,mark=*,mark size=0.6] table[x expr=\thisrowno{8}/2/pi,y expr=\thisrowno{1}] {ASCII/RandomIcMount2000.txt};
-%\legend{}
+\addplot[] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{1})*1000] {ASCII/goodclutchk2.txt};
+\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{5}-2)*1000] {ASCII/goodclutchk2.txt};
+\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{6}-2)*1000] {ASCII/goodclutchk2.txt};
+\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{7}-2)*1000] {ASCII/goodclutchk2.txt};
+\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{8}-2)*1000] {ASCII/goodclutchk2.txt};
+\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{9}-2)*1000] {ASCII/goodclutchk2.txt};
+\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{10}-2)*1000] {ASCII/goodclutchk2.txt};
+\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{11}-2)*1000] {ASCII/goodclutchk2.txt};
+\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{12}-2)*1000] {ASCII/goodclutchk2.txt};
+\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{13}-2)*1000] {ASCII/goodclutchk2.txt};
+%%\legend{}
 \end{axis}
 \end{tikzpicture}
-	\caption{measured surface distributions and harmonic interpolation.}
-	\label{fig:surfdist}
+	\caption{measured surface distributions (good clutch).}
+	\label{fig:goodsurfdist}
+\end{figure}
+\begin{figure}
+	\centering
+	\begin{tikzpicture}[scale=1]
+	\begin{axis}[xlabel=$\varphi$,ylabel=$d$ ($\mu$m) ,
+	scale = 0.43,
+	width=\textwidth,
+	xtick={0,0.5,1}, grid=major,
+	xticklabels={0,$\pi$,$2\pi$},
+	every axis y label/.style={at={(-0.2,0.5)},rotate=90}, 
+	every axis x label/.style={at={(0.5,-0.15)}},
+	xmin=0,xmax=1,
+	%height = 1.0\textwidth,
+	%legend style={at={(0.15,0.03)},anchor=south west}, 
+	%legend cell align=left, 
+	]
+	\addplot[] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{1})*1000] {ASCII/badclutchk2.txt};
+	\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{5}-2)*1000] {ASCII/badclutchk2.txt};
+	\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{6}-2)*1000] {ASCII/badclutchk2.txt};
+	\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{7}-2)*1000] {ASCII/badclutchk2.txt};
+	\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{8}-2)*1000] {ASCII/badclutchk2.txt};
+	\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{9}-2)*1000] {ASCII/badclutchk2.txt};
+	\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{10}-2)*1000] {ASCII/badclutchk2.txt};
+	\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{11}-2)*1000] {ASCII/badclutchk2.txt};
+	\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{12}-2)*1000] {ASCII/badclutchk2.txt};
+	\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{13}-2)*1000] {ASCII/badclutchk2.txt};
+	%%\legend{}
+	\end{axis}
+	\end{tikzpicture}
+	\caption{measured surface distributions (bad clutch).}
+	\label{fig:badsurfdist}
 \end{figure}
 \begin{figure}
 	\centering
@@ -287,7 +326,7 @@ Proof: result is a random variables. \\
 	%legend cell align=left, 
 	]
 	\addplot[color=black,only marks,mark=*,mark size=0.6] table[x expr=\thisrowno{8}/2/pi,y expr=\thisrowno{0}] {ASCII/RandomIcMount2000.txt};
-	\addplot[color=red,only marks,mark=*,mark size=0.6] table[x expr=\thisrowno{8}/2/pi,y expr=\thisrowno{1}] {ASCII/RandomIcMount2000.txt};
+%	\addplot[color=red,only marks,mark=*,mark size=0.6] table[x expr=\thisrowno{8}/2/pi,y expr=\thisrowno{1}] {ASCII/RandomIcMount2000.txt};
 	%\legend{}
 \end{axis}
 \end{tikzpicture}
