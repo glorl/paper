@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.26)  3 MAY 2021 11:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.26)  3 MAY 2021 14:07
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1265,7 +1265,7 @@ LaTeX Font Info:    Trying to load font information for T1+cmss on input line 1
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-<figs/Design.png, id=29, 299.01712pt x 275.3487pt>
+<figs/Design.png, id=30, 299.01712pt x 275.3487pt>
 File: figs/Design.png Graphic file (type png)
 <use figs/Design.png>
 Package pdftex.def Info: figs/Design.png  used on input line 155.
@@ -1289,12 +1289,6 @@ ome de-
  []
 
 
-Overfull \hbox (7.87051pt too wide) in paragraph at lines 163--164
-\T1/stix/m/n/10 scrip-tion: com-po-nents of a mul-ti-plate clutch are fric-tion
- plates,
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
@@ -1302,156 +1296,125 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--164
 [1
 
  <./thumbnails/cas-email.jpeg> <./figs/Design.png>]
-<figs/toothcontacts.png, id=70, 109.66972pt x 95.93843pt>
+<figs/toothcontacts.png, id=71, 109.66972pt x 95.93843pt>
 File: figs/toothcontacts.png Graphic file (type png)
 <use figs/toothcontacts.png>
-Package pdftex.def Info: figs/toothcontacts.png  used on input line 181.
+Package pdftex.def Info: figs/toothcontacts.png  used on input line 186.
 (pdftex.def)             Requested size: 82.25208pt x 71.95363pt.
-<figs/roughsurf.png, id=72, 185.0112pt x 126.65317pt>
+<figs/roughsurf.png, id=73, 185.0112pt x 126.65317pt>
 File: figs/roughsurf.png Graphic file (type png)
 <use figs/roughsurf.png>
-Package pdftex.def Info: figs/roughsurf.png  used on input line 208.
+Package pdftex.def Info: figs/roughsurf.png  used on input line 213.
 (pdftex.def)             Requested size: 138.75806pt x 94.98962pt.
 
-Overfull \hbox (0.60149pt too wide) in paragraph at lines 229--236
+Overfull \hbox (0.60149pt too wide) in paragraph at lines 234--241
 []\T1/stix/m/n/10 Finally, dy-namic sys-tem equa-tions are ob-tained in a MBS
  []
 
+[2 <./figs/toothcontacts.png> <./figs/roughsurf.png>]
 ===== Image 'figs/cas-dc-template-figure0' is up-to-date. ======
 
-Overfull \hbox (9.3205pt too wide) in paragraph at lines 246--274
+Overfull \hbox (9.3205pt too wide) in paragraph at lines 266--294
  [][] 
  []
 
 ===== Image 'figs/cas-dc-template-figure1' is up-to-date. ======
 
-Overfull \hbox (9.3205pt too wide) in paragraph at lines 279--307
+Overfull \hbox (9.3205pt too wide) in paragraph at lines 299--327
  [][] 
  []
 
-<figs/Fig1.pdf, id=79, 218.8175pt x 218.8175pt>
+<figs/Fig1.pdf, id=120, 218.8175pt x 218.8175pt>
 File: figs/Fig1.pdf Graphic file (type pdf)
 <use figs/Fig1.pdf>
-Package pdftex.def Info: figs/Fig1.pdf  used on input line 312.
+Package pdftex.def Info: figs/Fig1.pdf  used on input line 332.
 (pdftex.def)             Requested size: 164.11272pt x 164.11272pt.
 ===== Image 'figs/cas-dc-template-figure2' is up-to-date. ======
 File: figs/Fig1.pdf Graphic file (type pdf)
 <use figs/Fig1.pdf>
-Package pdftex.def Info: figs/Fig1.pdf  used on input line 342.
+Package pdftex.def Info: figs/Fig1.pdf  used on input line 362.
 (pdftex.def)             Requested size: 164.11272pt x 164.11272pt.
 
-Overfull \hbox (1.47052pt too wide) in paragraph at lines 242--346
+Overfull \hbox (1.47052pt too wide) in paragraph at lines 262--366
 \T1/stix/m/n/10 Main ran-dom-ness con-trib-u-tors: plate mount ori-en-ta-tion (
 nor-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--346
-
- []
-
-[2 <./figs/toothcontacts.png> <./figs/roughsurf.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
+Underfull \hbox (badness 10000) in paragraph at lines 262--366
 
  []
 
 
-Overfull \hbox (4.1505pt too wide) in paragraph at lines 358--361
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
+
+ []
+
+
+Overfull \hbox (4.1505pt too wide) in paragraph at lines 378--381
 \T1/stix/m/n/10 Friction co-ef-fi-cient be-tween plates and plate car-ri-ers: s
 tochas-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--361
+Underfull \hbox (badness 10000) in paragraph at lines 378--381
 
  []
 
 [3 <./figs/cas-dc-template-figure0.pdf> <./figs/cas-dc-template-figure1.pdf> <.
-/figs/Fig1.pdf> <./figs/cas-dc-template-figure2.pdf>]
-Overfull \hbox (5.5355pt too wide) in paragraph at lines 373--375
+/figs/Fig1.pdf>]
+Overfull \hbox (5.5355pt too wide) in paragraph at lines 393--395
 []\T1/stix/m/n/10 This class de-pends on the fol-low-ing pack-ages for its prop
 er
  []
 
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 404.
+(Font)              scaled to size 8.50006pt on input line 424.
 File: figs/Fig1.pdf Graphic file (type pdf)
 <use figs/Fig1.pdf>
-Package pdftex.def Info: figs/Fig1.pdf  used on input line 414.
+Package pdftex.def Info: figs/Fig1.pdf  used on input line 434.
 (pdftex.def)             Requested size: 164.11272pt x 164.11272pt.
 
 LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <9> not available
-(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 419.
+(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 439.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--422
+Underfull \hbox (badness 10000) in paragraph at lines 423--442
 []\T1/stix/m/n/10 Figures may be in-cluded us-ing the com-mand,
  []
 
-[4]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <./figs/cas-dc-template-figure2.pdf>]
 \c@theorem=\count352
 
-Overfull \hbox (5.35553pt too wide) in paragraph at lines 491--496
+Overfull \hbox (5.35553pt too wide) in paragraph at lines 511--516
 []\T1/stix/m/n/10 com-mands au-to-mat-i-cally de-fine coun-ters for the en-vi-r
 on-ments
  []
 
 
-Overfull \hbox (1.88582pt too wide) in paragraph at lines 497--499
+Overfull \hbox (1.88582pt too wide) in paragraph at lines 517--519
 []\T1/stix/m/n/10 The [][]\T1/zi4/m/n/10 \newproof []\T1/stix/m/n/10 com-mand d
 e-fines proof en-vi-ron-ments with
  []
 
-
-Overfull \hbox (15.09563pt too wide) in paragraph at lines 503--510
-[]\T1/stix/m/n/10 Two bib-li-o-graphic style files ([][]\T1/zi4/m/n/10 *.bst[]\
-T1/stix/m/n/10 ) are pro-vided --- model1-
- []
-
-
-Overfull \hbox (3.4291pt too wide) in paragraph at lines 503--510
-[][]\T1/zi4/m/n/10 \citealt []\T1/stix/m/n/10 etc. How-ever when you use model1
--num-names.bst,
- []
-
-
-Underfull \hbox (badness 2538) in paragraph at lines 511--514
-[][][]\T1/zi4/m/n/10 thebibliography []\T1/stix/m/n/10 en-vi-ron-ment. Each ref
--er-ence is a
- []
-
-
-LaTeX Warning: The counter will not be printed.
-             The label is: \textbullet  on input line 522.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 525--528
-[]\T1/stix/m/n/10 An af-fix and part of a ref-er-ence:
- []
-
-
-Overfull \hbox (6.35909pt too wide) in paragraph at lines 530--540
-\T1/stix/m/n/10 bered scheme. nat-bib pack-age is loaded by cas-dc with [][]\T1
-/zi4/m/n/10 numbers
- []
-
-(./cas-dc-template.bbl [5]) [6
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 596.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 596.
+(./cas-dc-template.bbl) [5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 577.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 577.
  (./cas-dc-template.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 596.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 596.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 577.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 577.
 Package rerunfilecheck Info: File `cas-dc-template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33915 strings out of 483057
- 764149 string characters out of 5962300
- 1141905 words of memory out of 5000000
- 48197 multiletter control sequences out of 15000+600000
- 648470 words of font info for 178 fonts, out of 8000000 for 9000
+ 33918 strings out of 483057
+ 764293 string characters out of 5962300
+ 1139905 words of memory out of 5000000
+ 48203 multiletter control sequences out of 15000+600000
+ 653928 words of font info for 180 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  63i,19n,98p,856b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/georg/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc0900.600
@@ -1468,12 +1431,13 @@ onts/type1/public/stix/stix-mathcal.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/stix/stix-mathex.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/stix/stix-mathit-bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 stix/stix-mathit.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/sti
-x-mathrm.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathsc
-r.pfb>
-Output written on cas-dc-template.pdf (7 pages, 587169 bytes).
+x-mathrm-bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-m
+athrm.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathscr.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathsf.pfb>
+Output written on cas-dc-template.pdf (6 pages, 608179 bytes).
 PDF statistics:
- 360 PDF objects out of 1000 (max. 8388607)
- 242 compressed objects within 3 object streams
- 87 named destinations out of 1000 (max. 500000)
+ 365 PDF objects out of 1000 (max. 8388607)
+ 241 compressed objects within 3 object streams
+ 84 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

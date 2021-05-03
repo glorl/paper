@@ -148,7 +148,7 @@ Three types of judder can be distinguished, namely, friction induced, pressure i
 Friction induced: sliding friction coefficient's speed dependency \cite{hinrichs1997reibungsschwingungen,kauderer1958nichtlineare}, negative gradient, negative contribution to damping. This is an instability. Pressure induced: whenever actuation piston vibrates axially, it modifies the torque, thus, torsional vibrations. External excitation. 
 Geometric excitation: geometrical deviations of the sliding surfaces modulate the local normal pressure, then local frictional torque is modified. In this paper adressed. Nature of the problem: external excitation, and it is impossible to extinct it. Only reduce.(surfaces never flat because of production). The less surface deviations and the better the material homogenity (i.e., high production quality), the less vibration excitation. \\
 Frequency: integer slip multiples. At clutch close, any Eigenmode can be excited because the excitation is at slip multiples and base frequency decays toward zero. Therefore critical. Here: considerations about how to obtain low judder values. This is an optimization problem \cite{albers1998Rupfen,dresig2014schwingungen,hausner2012Judder} which can only be tackled by arranging the production deficiancies in an appropriate manner. \\
-Measurement difficulty with plate clutch: very bad reproducibility. Probable reason: many contacts, many uncertainties. Many measurements necessary for profound understanding of influence parameters. Therefore a non-trivial question for experimental investigations \cite{ingram2010Clutch} \\
+Multiplate clutch because of high torques and small design space \cite{klement2011Fahrzeug}. can be situated in a transmission, separator, ... . Many contacts multiply the complexity of judder. Measurement difficulty with plate clutch: very bad reproducibility. Probable reason: many contacts, many uncertainties. Many measurements necessary for profound understanding of influence parameters. Therefore a non-trivial question for experimental investigations \cite{ingram2010Clutch} \\
 In this contribution, a simulation which reproduces measurement quality (reproducibility, parameter influences, some dependencies). Then Monte-Carlo simulation and evaluation. 
 \begin{figure}
 	\centering
@@ -160,21 +160,26 @@ In this contribution, a simulation which reproduces measurement quality (reprodu
 
 \section{Multiplate clutch system description}
 \subsection{Design}
-Multiplate clutch can be situated in a transmission, separator, ... . The design regarding judder has a uniform description: components of a multiplate clutch are friction plates, separator plates, piston, outer plate carrier (OPC) and inner plate carrier (IPC). (Fig. \ref{fig:design}). Plate carriers are connected with torque input (engine) and ouput (gearset, ...), rotate about an inertial-fixed axis. Plates mounted by spline on plate carriers, can move axially and have slight play due to clearance (Fig. \ref{fig:teeth}). Contact pads on friction plates for defined contact area; pad geometry is the secret of the plate manufacturer. Piston pushes plates in axial direction, which leads to torque transmission. \\
+components of a multiplate clutch for judder description are friction plates, separator plates, piston, outer plate carrier (OPC) and inner plate carrier (IPC). (Fig. \ref{fig:design}). Plate carriers are connected with torque input (engine) and ouput (gearset, ...), rotate about an inertial-fixed axis. Plates mounted by spline on plate carriers, can move axially and have slight play due to clearance (Fig. \ref{fig:teeth}). Contact pads on friction plates for defined contact area; pad geometry is the secret of the plate manufacturer. Piston pushes plates in axial direction, which leads to torque transmission. \\
 \subsection{Flank contact description}
 There are $n_o$ and $n_i$ tooth contacts. Contact kinematics as in textbooks \cite{willner2013kontinuums}, applied for the rigid tooth geometry. 
-Equal distribution. Implementation: point-plane contact. 
-starting from body-fixed center, the coordinate is
+Equal distribution. Implementation: point-point contact. 
+starting from body-fixed center, the coordinate of the $i^{\textrm{th}}$ tooth flank on plate (body $\mathcal{B}_j$) is
 \begin{align}
-	& \boldsymbol{r}_f^{\mathcal{I}} = r_{pitch} \boldsymbol{e}_r^{\mathcal{B}} \left(\varphi_{left}\right) \\
-	& \boldsymbol{e}_{n,f}^{\mathcal{B}} = R r\\
-	& \boldsymbol{v}_f^{\mathcal{B}}  = \boldsymbol{v}_s ^{\mathcal{I}} + \boldsymbol{\omega}^{\mathcal{B}}\times \boldsymbol{r}_f\\
-	& \boldsymbol{v}_{T,f}^{\mathcal{B}} = \boldsymbol{v}_f ^{\mathcal{I}}- \left(\boldsymbol{v}_f ^{\mathcal{I}}\cdot \boldsymbol{e}_{n,f}^{\mathcal{B}} \right)\boldsymbol{e}_{n,f}^{\mathcal{B}}
+	\mathbf{r}_{i}^{\mathcal{B}_j} & = \mathbf{u}^{\mathcal{B}_j} + \frac{d}{2} \mathbf{e}_r^{\mathcal{B}_j} \left(\varphi_i+\beta/2\right) \\
+	\mathbf{r}_{n}^{\mathcal{B}_j} & = \mathsf{R}(\mathbf{e}_z^{\mathcal{B}_j},\alpha)\cdot \left(\mathbf{r}_{i}^{\mathcal{B}_j}-\mathbf{u}^{\mathcal{B}_j}\right)\\
+	\mathbf{e}_{n}^{\mathcal{B}_j}& = \mathbf{r}_{n}^{\mathcal{B}_j}\big/ |\mathbf{r}_{n}^{\mathcal{B}_j}|\\
+	\mathbf{v}_i^{\mathcal{B}_j} & = \frac{\textrm{d}}{\textrm{d}t}\mathbf{u}^{\mathcal{B}_j} + \mathbf{\omega}^{\mathcal{B}_j}\times \mathbf{r}_i^{\mathcal{B}_j}
+%	& \boldsymbol{v}_{T,f}^{\mathcal{B}} = \boldsymbol{v}_f ^{\mathcal{I}}- \left(\boldsymbol{v}_f ^{\mathcal{I}}\cdot \boldsymbol{e}_{n,f}^{\mathcal{B}} \right)\boldsymbol{e}_{n,f}^{\mathcal{B}}
 \end{align}
-gap function \cite{willner2013kontinuums}
+with $\boldsymbol{u}^{\mathcal{B}_j}$ the displacement of $\mathcal{B}_j$ , $d$ the tooth pitch diameter, $\varphi_i$ the $i^{\textrm{th}}$ tooth angle, $\beta$ the tooth opening angle, $\alpha$ the pressure angle, $(\cdot)^\mathcal{I}$ denoting a physical quantity in inertial frame and $(\cdot)^\mathcal{B}$ in body-fixed frame, $\mathsf{R}(\mathbf{n},\varphi)$ the rotation tensor about $\mathbf{n}$ by $\varphi$ \cite{wittenburg2016kinematics}. If not denoted differently, velocities are resolved in inertial space. gap function and velocity between bodies $\mathcal{B}_j$ and $\mathcal{B}_k$ in contact normal direction
 \begin{align}
-	& g = \left(\boldsymbol{r}_f^{\mathcal{I}}-\boldsymbol{r}_f^{\mathcal{I}}\right)\cdot \boldsymbol{e}_{n,f}^{\mathcal{B}}\\
-	& \dot g = \left(\boldsymbol{v}_f^{\mathcal{I}}-\boldsymbol{v}_f^{\mathcal{I}}\right)\cdot \boldsymbol{e}_{n,f}^{\mathcal{B}}
+	g_i & = \left(\textbf{r}_i^{\mathcal{B}_j}-\textbf{r}_i^{\mathcal{B}_k}\right)\cdot \textbf{e}_{n,f}^{\mathcal{B}}\\
+	\dot g_i & = \left(\textbf{v}_i^{\mathcal{B}_j}-\textbf{v}_i^{\mathcal{B}_k}\right)\cdot \textbf{e}_{n,f}^{\mathcal{B}}
+\end{align}
+tangential velocity
+\begin{align}
+	\mathbf{v}_T = \mathbf{v}_i^{\mathcal{B}_j}-\dot {g}_i\mathbf{e}_n^{\mathcal B_j}
 \end{align}
 \begin{figure}
 	\centering
@@ -238,6 +243,21 @@ Set of equations has the following structure
 	&{M}\ddot{{q}} + f_{ij}(q) = 0
 \end{align}
 Boundary conditions. piston is pushed in axial direction by hydraulics. close to displacement boundary condition (elasticity of oil reservoir much higher than plates elasticity).
+\begin{table}[width=.9\linewidth,cols=4,pos=h]
+	\caption{Nominal parameter values chosen for simulations.}\label{tab:parameters}
+\begin{tabular*}{\tblwidth}{@{} LLLL@{} }
+	\toprule
+	Symbol & Parameter & Value & Unit\\
+	\midrule
+	$\alpha$ & pressure angle & 30 & deg \\
+	$\beta$ & tooth opening angle & 3 & deg \\
+	$c_n$ & pad normal stiffness & $10^6$ & N/m\\
+	$d$ & pitch diameter & 20 & cm \\
+	$\mu$ & friction coefficient & 0.105 & - \\
+	\bottomrule
+\end{tabular*}
+\end{table}
+
 \section{Verification with measurements}
 Clear: single simulation not reasonable. Many simulations because of spread and because many parameters can't be measured, are random. \\
 stochastic influences from surface distributions are obvious. Main randomness contributors: plate mount orientation (normal distribution), initial conditions (Gaussisan distribution), friction coefficient (Gaussian distribution). In addition, material inhomogeneity, ... \\
@@ -329,7 +349,7 @@ Proof: result is a random variables. \\
 	%legend style={at={(0.15,0.03)},anchor=south west}, 
 	%legend cell align=left, 
 	]
-	\addplot[color=black,only marks,mark=*,mark size=0.6] table[x expr=\thisrowno{8}/2/pi,y expr=\thisrowno{0}] {ASCII/RandomIcMount2000.txt};
+	\addplot[color=black,only marks,mark=*,mark size=0.8] table[x expr=\thisrowno{17}/2/pi,y expr=\thisrowno{1}] {ASCII/RandomIcMount2000.txt};
 %	\addplot[color=red,only marks,mark=*,mark size=0.6] table[x expr=\thisrowno{8}/2/pi,y expr=\thisrowno{1}] {ASCII/RandomIcMount2000.txt};
 	%\legend{}
 \end{axis}
@@ -498,45 +518,6 @@ The \verb+\newproof+ command defines proof environments with
 upright font shape.  No counters are defined. 
 
 
-\section{Bibliography}
-
-Two bibliographic style files (\verb+*.bst+) are provided ---
-{model1-num-names.bst} and {model2-names.bst} --- the first one can be
-used for the numbered scheme. This can also be used for the numbered
-with new options of {natbib.sty}. The second one is for the author year
-scheme. When  you use model2-names.bst, the citation commands will be
-like \verb+\citep+,  \verb+\citet+, \verb+\citealt+ etc. However when
-you use model1-num-names.bst, you may use only \verb+\cite+ command.
-
-\verb+thebibliography+ environment.  Each reference is a\linebreak
-\verb+\bibitem+ and each \verb+\bibitem+ is identified by a label,
-by which it can be cited in the text:
-
-\noindent In connection with cross-referencing and
-possible future hyperlinking it is not a good idea to collect
-more that one literature item in one \verb+\bibitem+.  The
-so-called Harvard or author-year style of referencing is enabled
-by the \LaTeX{} package {natbib}. With this package the
-literature can be cited as follows:
-
-\begin{enumerate}[\textbullet]
-\item Parenthetical: \verb+\citep{WB96}+ produces (Wettig \& Brown, 1996).
-\item Textual: \verb+\citet{ESG96}+ produces Elson et al. (1996).
-\item An affix and part of a reference:\break
-\verb+\citep[e.g.][Ch. 2]{Gea97}+ produces (e.g. Governato et
-al., 1997, Ch. 2).
-\end{enumerate}
-
-In the numbered scheme of citation, \verb+\cite{<label>}+ is used,
-since \verb+\citep+ or \verb+\citet+ has no relevance in the numbered
-scheme.  {natbib} package is loaded by {cas-dc} with
-\verb+numbers+ as default option.  You can change this to author-year
-or harvard scheme by adding option \verb+authoryear+ in the class
-loading command.  If you want to use more options of the {natbib}
-package, you can do so with the \verb+\biboptions+ command.  For
-details of various options of the {natbib} package, please take a
-look at the {natbib} documentation, which is part of any standard
-\LaTeX{} installation.
 
 \appendix
 \section{My Appendix}
@@ -546,7 +527,7 @@ Appendix sections are coded under \verb+\appendix+.
 author credit taxonomy contribution roles tagged using \verb+\credit+ 
 in frontmatter.
 
-\printcredits
+%\printcredits
 
 %% Loading bibliography style file
 %\bibliographystyle{model1-num-names}

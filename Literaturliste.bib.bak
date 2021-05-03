@@ -1490,4 +1490,18 @@
   publisher = {Springer},
 }
 
+@InProceedings{jehle2016flexible,
+  author    = {G. Jehle and O. Drozdetskaya and A. Fidlin},
+  title     = {Nonlinear dynamics of gearoxes with flexible friction clutch},
+  booktitle = {Proc. of ICTAM},
+  year      = {2016},
+}
+
+@Book{wittenburg2016kinematics,
+  title     = {Kinematics},
+  publisher = {{Springer Heidelberg New York Dordrecht London}},
+  year      = {2016},
+  author    = {Jens Wittenburg},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
