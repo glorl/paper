@@ -174,12 +174,12 @@ starting from body-fixed center, the coordinate of the $i^{\textrm{th}}$ tooth f
 \end{align}
 with $\boldsymbol{u}^{\mathcal{B}_j}$ the displacement of $\mathcal{B}_j$ , $d$ the tooth pitch diameter, $\varphi_i$ the $i^{\textrm{th}}$ tooth angle, $\beta$ the tooth opening angle, $\alpha$ the pressure angle, $(\cdot)^\mathcal{I}$ denoting a physical quantity in inertial frame and $(\cdot)^\mathcal{B}$ in body-fixed frame, $\mathsf{R}(\mathbf{n},\varphi)$ the rotation tensor about $\mathbf{n}$ by $\varphi$ \cite{wittenburg2016kinematics}. If not denoted differently, velocities are resolved in inertial space. gap function and velocity between bodies $\mathcal{B}_j$ and $\mathcal{B}_k$ in contact normal direction
 \begin{align}
-	g_i & = \left(\textbf{r}_i^{\mathcal{B}_j}-\textbf{r}_i^{\mathcal{B}_k}\right)\cdot \textbf{e}_{n,f}^{\mathcal{B}}\\
-	\dot g_i & = \left(\textbf{v}_i^{\mathcal{B}_j}-\textbf{v}_i^{\mathcal{B}_k}\right)\cdot \textbf{e}_{n,f}^{\mathcal{B}}
+	g_i & = \left(\textbf{r}_i^{\mathcal{B}_j}-\textbf{r}_i^{\mathcal{B}_k}\right)\cdot \textbf{e}_{n}^{\mathcal{B}_j}\\
+	\dot g_i & = \left(\textbf{v}_i^{\mathcal{B}_j}-\textbf{v}_i^{\mathcal{B}_k}\right)\cdot \textbf{e}_{n}^{\mathcal{B}_j}
 \end{align}
-tangential velocity
+Choice of master node. tangential velocity
 \begin{align}
-	\mathbf{v}_T = \mathbf{v}_i^{\mathcal{B}_j}-\dot {g}_i\mathbf{e}_n^{\mathcal B_j}
+	\left(\mathbf{v}_T\right)_i = \textbf{v}_i^{\mathcal{B}_j}-\textbf{v}_i^{\mathcal{B}_k}-\dot {g}_i\mathbf{e}_n^{\mathcal B_j}
 \end{align}
 \begin{figure}
 	\centering
@@ -189,23 +189,24 @@ tangential velocity
 \end{figure}\\
 local normal force and friction force (regularized \cite{vielsack1996regularisierung}) 
 \begin{align}
-	& \boldsymbol{f}_n = \left\{
+	\left(\textbf{f}_N\right)_i & = \left\{
 	\begin{array}{ll}
-	(c g + d \dot g)\boldsymbol{e}_n & c g + d \dot g \leq 0\\
+	(c g_i + d \dot g_i)\textbf{e}_n^{\mathcal{B}_i} & \textrm{if}~c g_i + d \dot g_i \leq 0\\
 	0 & \textrm{else}
 	\end{array}\right.\\
-	& \boldsymbol{f}_t = \mu |f_n | reg(v_t) \boldsymbol{e}_t
+	\left(\textbf{f}_T\right)_i & = \mu \left|\left(\textbf{f}_N\right)_i \right| reg\left(\left|\textbf{v}_T^{\mathcal{B}_i}\right|\right) \ \textbf{e}_T^{\mathcal{B}_i}\\
+	\textbf{e}_T^{\mathcal{B}_i}& = \textbf{v}_T^{\mathcal{B}_i}\big/ 	\left|\textbf{v}_T^{\mathcal{B}_i}\right|
 \end{align}
 with $reg(\cdot)$ the regularization of $sign(\cdot)$. The piecewise definition of the normal force represents the gap. These force act on the plate COM: 
 \begin{align}
-	& f = \sum f_n + f_t\\
-	& t = \sum r_{f,i}\times \left(f_n + f_t\right)
+	\mathbf{f}_j & = \sum_i \left(\textbf{f}_N\right)_i + \left(\textbf{f}_T\right)_i\\
+	\mathbf{t}_j & = \sum_i \mathbf{r}_{i}^{\mathcal{B}_i} \times \left(\textbf{f}_N\right)_i + \left(\textbf{f}_T\right)_i
 \end{align}
 \subsection{Pad contact description}
 surface parametrization: contact ring with circular thickness distribution. Assumption: no ''waviness'', i.e., height profile symmetric on both contact sides
 \begin{align}
-	& \boldsymbol{r}_i = r\boldsymbol{e}_r + h\boldsymbol{e}_z\\
-	& h = h_0 + \sum_{k=11}^{n}h_k \cos\left(k\varphi-\beta_k\right) 
+	\boldsymbol{r}_i & = r\boldsymbol{e}_r + h\boldsymbol{e}_z\\
+	h & = h_0 + \sum_{k=11}^{n}h_k \cos\left(k\varphi-\beta_k\right) 
 \end{align}
 Because of the periodicity, the surface can be approximated by a Fourier series, which is generated out of geometric measurements, has the advantage of an analytic formula for the surface parametrization. 
 \begin{figure}
@@ -257,9 +258,78 @@ Boundary conditions. piston is pushed in axial direction by hydraulics. close to
 	\bottomrule
 \end{tabular*}
 \end{table}
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=1]
+\begin{axis}[xlabel=$\varphi$,ylabel=$\Delta d$ ($\mu$m) ,
+scale = 0.43,
+width=\textwidth,
+xtick={0,0.5,1}, grid=major,
+xticklabels={0,$\pi$,$2\pi$},
+every axis y label/.style={at={(-0.2,0.5)},rotate=90}, 
+every axis x label/.style={at={(0.5,-0.15)}},
+xmin=0,xmax=1,
+ymin=-60,ymax=60,
+]
+\addplot[] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{1})*1000] {ASCII/goodclutchk2.txt};
+\addplot[] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{3})*1000] {ASCII/goodclutchk2.txt};
+\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{5}-2)*1000] {ASCII/goodclutchk2.txt};
+\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{6}-2)*1000] {ASCII/goodclutchk2.txt};
+\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{7}-2)*1000] {ASCII/goodclutchk2.txt};
+\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{8}-2)*1000] {ASCII/goodclutchk2.txt};
+\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{9}-2)*1000] {ASCII/goodclutchk2.txt};
+\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{10}-2)*1000] {ASCII/goodclutchk2.txt};
+\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{11}-2)*1000] {ASCII/goodclutchk2.txt};
+\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{12}-2)*1000] {ASCII/goodclutchk2.txt};
+\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{13}-2)*1000] {ASCII/goodclutchk2.txt};
+%%\legend{}
+\end{axis}
+\end{tikzpicture}
+\caption{measured surface deviations in contacts at OPC, separator plates, friction plates and piston (good clutch).}
+\label{fig:goodsurfdist}
+\end{figure}
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=1]
+\begin{axis}[xlabel=$\varphi$,ylabel=$\Delta d$ ($\mu$m) ,
+scale = 0.43,
+width=\textwidth,
+xtick={0,0.5,1}, grid=major,
+xticklabels={0,$\pi$,$2\pi$},
+every axis y label/.style={at={(-0.2,0.5)},rotate=90}, 
+every axis x label/.style={at={(0.5,-0.15)}},
+xmin=0,xmax=1,
+ymin=-60,ymax=60,
+%height = 1.0\textwidth,
+%legend style={at={(0.15,0.03)},anchor=south west}, 
+%legend cell align=left, 
+]
+\addplot[] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{1})*1000] {ASCII/badclutchk2.txt};
+\addplot[] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{3})*1000] {ASCII/badclutchk2.txt};
+\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{5}-2)*1000] {ASCII/badclutchk2.txt};
+\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{6}-2)*1000] {ASCII/badclutchk2.txt};
+\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{7}-2)*1000] {ASCII/badclutchk2.txt};
+\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{8}-2)*1000] {ASCII/badclutchk2.txt};
+\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{9}-2)*1000] {ASCII/badclutchk2.txt};
+\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{10}-2)*1000] {ASCII/badclutchk2.txt};
+\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{11}-2)*1000] {ASCII/badclutchk2.txt};
+\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{12}-2)*1000] {ASCII/badclutchk2.txt};
+\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{13}-2)*1000] {ASCII/badclutchk2.txt};
+%%\legend{}
+\end{axis}
+\end{tikzpicture}
+\caption{measured surface deviations in contacts at OPC, separator plates, friction plates and piston (bad clutch).}
+\label{fig:badsurfdist}
+\end{figure}
 
 \section{Verification with measurements}
 \subsection{Operation conditions}
+constant rotational speed of input and output, constant actuation. Excurse to measurement: here two aspects are relevant
+\begin{enumerate}
+	\item torsional Eigenmodes of test bench can increase/decrease result 
+	\item Engines contribute to excitation
+\end{enumerate}
+for point 1., it is often necessary to sweep the slip such that one can estimate the influence of the resonances better. Here not relevant because of no torsional feedback. For point 2., in experiment, n2 has non-zero speed. Here also not interesting because of ideal drive units. 
 \begin{figure}
 	\centering
 	\begin{tikzpicture}[scale=1]
@@ -300,96 +370,51 @@ Boundary conditions. piston is pushed in axial direction by hydraulics. close to
 	\caption{Operation conditions.}
 	\label{fig:opcond}
 \end{figure}
-\subsection{Time-domain vs. frequency domain analysis}
-
+\subsection{Analysis in time- and frequency domain}
+Slip speed = n2-n1. $T_1=60 \textrm{ s}/ 105 \textrm{ rpm} = 0.57$ s.
 \begin{figure}
 	\centering
 	\begin{tikzpicture}[scale=1]
-	\begin{axis}[xlabel=$t$ (s),ylabel=$n$ (rpm),
+	\begin{axis}[xlabel=$t/T_1$ (-),ylabel=$M$ (Nm),
 	scale = 0.43,
 	width=\textwidth,
+	height=0.8\textwidth,
 	%	xtick={0,0.5,1}, 
 	grid=major,
 	every axis y label/.style={at={(-0.15,0.5)},rotate=90}, 
-	every axis x label/.style={at={(0.5,-0.25)}},
-	xmin=-0,xmax=5,
-	ymin=-5,ymax=30,
+	every axis x label/.style={at={(0.5,-0.15)}},
+	xmin=0.5,xmax=6,
+	ymin=22,ymax=30,
 	%legend style={at={(0.15,0.03)},anchor=south west}, 
 	%legend cell align=left, 
 	]
-	\addplot[] table[x expr=\thisrowno{0},y expr=(\thisrowno{1})] {ASCII/output1k.txt};
-%	\addplot[] table[x expr=\thisrowno{0},y expr=(\thisrowno{4})] {ASCII/output1k.txt};
-%	\addplot[] table[x expr=\thisrowno{0},y expr=(\thisrowno{6})] {ASCII/output1k.txt};
+	\addplot[] table[x expr=\thisrowno{0}/60*105,y expr=(\thisrowno{1})] {ASCII/output1k.txt};
+%	\addplot[] table[x expr=\thisrowno{0}/60*105,y expr=(\thisrowno{4})] {ASCII/output1k.txt};
+	\addplot[] table[x expr=\thisrowno{0}/60*105,y expr=(\thisrowno{6})] {ASCII/output1k.txt};
+	\addplot[] table[x expr=\thisrowno{0}/60*105,y expr=(\thisrowno{8}-1.5)] {ASCII/output1k.txt};
+	\addplot[] table[x expr=\thisrowno{0}/60*105,y expr=(\thisrowno{9})] {ASCII/output1k.txt};
+	\addplot[] table[x expr=\thisrowno{0}/60*105,y expr=(\thisrowno{10}-2.5)] {ASCII/output1k.txt};
 	\end{axis}
 	\end{tikzpicture}
-	\caption{Operation conditions.}
+	\caption{Torque in time domain. Some have pronounced 1st order, some 2nd, some are really flat.}
 	\label{fig:timedomain}
 \end{figure}
-Clear: single simulation not reasonable. Many simulations because of spread and because many parameters can't be measured, are random. \\
+Frequency analysis: according to test evaluation, FFT analysis is performed over time domain
+\begin{align}
+	Y(\omega) = \mathcal{F}\{y(t)\}
+\end{align}
+with amplitudes depending on frequency being a multiple of the slip $\omega_0$, i.e. 
+\begin{align}
+	A_k = |Y(k\cdot \omega_0)|
+\end{align}
+Mainly the 1st and 2nd order are of interest. Clear: single simulation not reasonable. Many simulations because of spread and because many parameters can't be measured, are random. Therefore the next section. 
+\section{Monte-Carlo simulation}
 stochastic influences from surface distributions are obvious. Main randomness contributors: plate mount orientation (normal distribution), initial conditions (Gaussisan distribution), friction coefficient (Gaussian distribution). In addition, material inhomogeneity, ... \\
-\begin{figure}
-	\centering
-\begin{tikzpicture}[scale=1]
-\begin{axis}[xlabel=$\varphi$,ylabel=$\Delta d$ ($\mu$m) ,
-scale = 0.43,
-width=\textwidth,
-xtick={0,0.5,1}, grid=major,
-xticklabels={0,$\pi$,$2\pi$},
-every axis y label/.style={at={(-0.2,0.5)},rotate=90}, 
-every axis x label/.style={at={(0.5,-0.15)}},
-xmin=0,xmax=1,
-ymin=-60,ymax=60,
-]
-\addplot[] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{1})*1000] {ASCII/goodclutchk2.txt};
-\addplot[] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{3})*1000] {ASCII/goodclutchk2.txt};
-\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{5}-2)*1000] {ASCII/goodclutchk2.txt};
-\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{6}-2)*1000] {ASCII/goodclutchk2.txt};
-\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{7}-2)*1000] {ASCII/goodclutchk2.txt};
-\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{8}-2)*1000] {ASCII/goodclutchk2.txt};
-\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{9}-2)*1000] {ASCII/goodclutchk2.txt};
-\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{10}-2)*1000] {ASCII/goodclutchk2.txt};
-\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{11}-2)*1000] {ASCII/goodclutchk2.txt};
-\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{12}-2)*1000] {ASCII/goodclutchk2.txt};
-\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{13}-2)*1000] {ASCII/goodclutchk2.txt};
-%%\legend{}
-\end{axis}
-\end{tikzpicture}
-	\caption{measured surface deviations in contacts at OPC, separator plates, friction plates and piston (good clutch).}
-	\label{fig:goodsurfdist}
-\end{figure}
-\begin{figure}
-	\centering
-	\begin{tikzpicture}[scale=1]
-	\begin{axis}[xlabel=$\varphi$,ylabel=$\Delta d$ ($\mu$m) ,
-	scale = 0.43,
-	width=\textwidth,
-	xtick={0,0.5,1}, grid=major,
-	xticklabels={0,$\pi$,$2\pi$},
-	every axis y label/.style={at={(-0.2,0.5)},rotate=90}, 
-	every axis x label/.style={at={(0.5,-0.15)}},
-	xmin=0,xmax=1,
-	ymin=-60,ymax=60,
-	%height = 1.0\textwidth,
-	%legend style={at={(0.15,0.03)},anchor=south west}, 
-	%legend cell align=left, 
-	]
-	\addplot[] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{1})*1000] {ASCII/badclutchk2.txt};
-	\addplot[] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{3})*1000] {ASCII/badclutchk2.txt};
-	\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{5}-2)*1000] {ASCII/badclutchk2.txt};
-	\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{6}-2)*1000] {ASCII/badclutchk2.txt};
-	\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{7}-2)*1000] {ASCII/badclutchk2.txt};
-	\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{8}-2)*1000] {ASCII/badclutchk2.txt};
-	\addplot[color=red] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{9}-2)*1000] {ASCII/badclutchk2.txt};
-	\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{10}-2)*1000] {ASCII/badclutchk2.txt};
-	\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{11}-2)*1000] {ASCII/badclutchk2.txt};
-	\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{12}-2)*1000] {ASCII/badclutchk2.txt};
-	\addplot[color=blue] table[x expr=\thisrowno{0}/32,y expr=(\thisrowno{13}-2)*1000] {ASCII/badclutchk2.txt};
-	%%\legend{}
-	\end{axis}
-	\end{tikzpicture}
-	\caption{measured surface deviations in contacts at OPC, separator plates, friction plates and piston (bad clutch).}
-	\label{fig:badsurfdist}
-\end{figure}
+
+2 surface data samples. According to tests, the first part of good clutch, the second bad clutch. Reproduce this difference is part of model verification. \\
+according, simulation setup: 
+randomness in friction coefficient, normal stiffness, plate orientation, initial coefficients.\\
+Stochastic 
 \begin{figure}
 	\centering
 	\includegraphics[scale=.75]{figs/Fig1.pdf}
@@ -398,8 +423,8 @@ ymin=-60,ymax=60,
 \end{figure}
 Proof: result is a random variables. \\
 \begin{figure}
-\centering
-\begin{tikzpicture}[scale=1]
+	\centering
+	\begin{tikzpicture}[scale=1]
 	\begin{axis}[xlabel=$\varphi_{piston}$,ylabel=$T$ ,
 	scale = 0.43,
 	width=\textwidth,
@@ -413,28 +438,19 @@ Proof: result is a random variables. \\
 	%legend cell align=left, 
 	]
 	\addplot[color=black,only marks,mark=*,mark size=0.8] table[x expr=\thisrowno{17}/2/pi,y expr=\thisrowno{1}] {ASCII/RandomIcMount2000.txt};
-%	\addplot[color=red,only marks,mark=*,mark size=0.6] table[x expr=\thisrowno{8}/2/pi,y expr=\thisrowno{1}] {ASCII/RandomIcMount2000.txt};
+	%	\addplot[color=red,only marks,mark=*,mark size=0.6] table[x expr=\thisrowno{8}/2/pi,y expr=\thisrowno{1}] {ASCII/RandomIcMount2000.txt};
 	%\legend{}
-\end{axis}
-\end{tikzpicture}
-\caption{Matching + IC influence. Sort according to different components.}
-\label{fig:matching}
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Matching + IC influence. Sort according to different components.}
+	\label{fig:matching}
 \end{figure}
 \begin{figure}
-\centering
-\includegraphics[scale=.75]{figs/Fig1.pdf}
-\caption{Full parametric simulation. Parameter influences.}
-\label{fig:full parametric}
+	\centering
+	\includegraphics[scale=.75]{figs/Fig1.pdf}
+	\caption{Full parametric simulation. Parameter influences.}
+	\label{fig:full parametric}
 \end{figure}\\
-
-2 surface data samples. According to tests, the first part of good clutch, the second bad clutch. Reproduce this difference is part of model verification. \\
-
-according, simulation setup: 
-randomness in friction coefficient, normal stiffness, plate orientation, initial coefficients.
-
-Stochastic 
-
-\section{Linear regression analysis}
 \section{Further regression analysis methods}
 
 \section{Conclusion}

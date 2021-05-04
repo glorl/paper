@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.26)  4 MAY 2021 11:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.26)  4 MAY 2021 13:34
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1304,121 +1304,121 @@ Package pdftex.def Info: figs/toothcontacts.png  used on input line 186.
 <figs/roughsurf.png, id=73, 185.0112pt x 126.65317pt>
 File: figs/roughsurf.png Graphic file (type png)
 <use figs/roughsurf.png>
-Package pdftex.def Info: figs/roughsurf.png  used on input line 213.
+Package pdftex.def Info: figs/roughsurf.png  used on input line 214.
 (pdftex.def)             Requested size: 138.75806pt x 94.98962pt.
 
-Overfull \hbox (0.60149pt too wide) in paragraph at lines 234--241
+Overfull \hbox (0.60149pt too wide) in paragraph at lines 235--242
 []\T1/stix/m/n/10 Finally, dy-namic sys-tem equa-tions are ob-tained in a MBS
  []
 
 [2 <./figs/toothcontacts.png> <./figs/roughsurf.png>]
 ===== Image 'figs/cas-dc-template-figure0' is up-to-date. ======
-===== Image 'figs/cas-dc-template-figure1' is up-to-date. ======
-===== Image 'figs/cas-dc-template-figure2' is up-to-date. ======
 
-Overfull \hbox (9.3205pt too wide) in paragraph at lines 332--357
+Overfull \hbox (9.3205pt too wide) in paragraph at lines 263--288
  [][] 
  []
 
+===== Image 'figs/cas-dc-template-figure1' is up-to-date. ======
+
+Overfull \hbox (9.3205pt too wide) in paragraph at lines 293--321
+ [][] 
+ []
+
+
+Overfull \hbox (10.69557pt too wide) in paragraph at lines 329--330
+[]\T1/stix/m/n/10 torsional Eigen-modes of test bench can in-crease/decrease
+ []
+
+===== Image 'figs/cas-dc-template-figure2' is up-to-date. ======
 ===== Image 'figs/cas-dc-template-figure3' is up-to-date. ======
 
-Overfull \hbox (9.3205pt too wide) in paragraph at lines 362--390
- [][] 
- []
-
-<figs/Fig1.pdf, id=122, 218.8175pt x 218.8175pt>
-File: figs/Fig1.pdf Graphic file (type pdf)
-<use figs/Fig1.pdf>
-Package pdftex.def Info: figs/Fig1.pdf  used on input line 395.
-(pdftex.def)             Requested size: 164.11272pt x 164.11272pt.
-===== Image 'figs/cas-dc-template-figure4' is up-to-date. ======
-File: figs/Fig1.pdf Graphic file (type pdf)
-<use figs/Fig1.pdf>
-Package pdftex.def Info: figs/Fig1.pdf  used on input line 425.
-(pdftex.def)             Requested size: 164.11272pt x 164.11272pt.
-
-Overfull \hbox (1.47052pt too wide) in paragraph at lines 328--429
-\T1/stix/m/n/10 Main ran-dom-ness con-trib-u-tors: plate mount ori-en-ta-tion (
-nor-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 328--429
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
-
- []
-
-
-Overfull \hbox (4.1505pt too wide) in paragraph at lines 441--444
-\T1/stix/m/n/10 Friction co-ef-fi-cient be-tween plates and plate car-ri-ers: s
-tochas-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 441--444
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
  []
 
 [3 <./figs/cas-dc-template-figure0.pdf> <./figs/cas-dc-template-figure1.pdf> <.
 /figs/cas-dc-template-figure2.pdf>]
-Overfull \hbox (5.5355pt too wide) in paragraph at lines 456--458
+<figs/Fig1.pdf, id=193, 218.8175pt x 218.8175pt>
+File: figs/Fig1.pdf Graphic file (type pdf)
+<use figs/Fig1.pdf>
+Package pdftex.def Info: figs/Fig1.pdf  used on input line 420.
+(pdftex.def)             Requested size: 164.11272pt x 164.11272pt.
+
+===== Image 'figs/cas-dc-template-figure4' is up-to-date. ======
+File: figs/Fig1.pdf Graphic file (type pdf)
+<use figs/Fig1.pdf>
+Package pdftex.def Info: figs/Fig1.pdf  used on input line 450.
+(pdftex.def)             Requested size: 164.11272pt x 164.11272pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--454
+
+ []
+
+
+Overfull \hbox (4.1505pt too wide) in paragraph at lines 457--460
+\T1/stix/m/n/10 Friction co-ef-fi-cient be-tween plates and plate car-ri-ers: s
+tochas-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--460
+
+ []
+
+[4 <./figs/cas-dc-template-figure3.pdf> <./figs/Fig1.pdf> <./figs/cas-dc-templa
+te-figure4.pdf>]
+Overfull \hbox (5.5355pt too wide) in paragraph at lines 472--474
 []\T1/stix/m/n/10 This class de-pends on the fol-low-ing pack-ages for its prop
 er
  []
 
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 487.
+(Font)              scaled to size 8.50006pt on input line 503.
 File: figs/Fig1.pdf Graphic file (type pdf)
 <use figs/Fig1.pdf>
-Package pdftex.def Info: figs/Fig1.pdf  used on input line 497.
+Package pdftex.def Info: figs/Fig1.pdf  used on input line 513.
 (pdftex.def)             Requested size: 164.11272pt x 164.11272pt.
 
 LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <9> not available
-(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 502.
+(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 518.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 486--505
+Underfull \hbox (badness 10000) in paragraph at lines 502--521
 []\T1/stix/m/n/10 Figures may be in-cluded us-ing the com-mand,
  []
 
-[4 <./figs/cas-dc-template-figure3.pdf> <./figs/Fig1.pdf> <./figs/cas-dc-templa
-te-figure4.pdf>]
 \c@theorem=\count352
 
-Overfull \hbox (5.35553pt too wide) in paragraph at lines 574--579
+Overfull \hbox (5.35553pt too wide) in paragraph at lines 590--595
 []\T1/stix/m/n/10 com-mands au-to-mat-i-cally de-fine coun-ters for the en-vi-r
 on-ments
  []
 
 
-Overfull \hbox (1.88582pt too wide) in paragraph at lines 580--582
+Overfull \hbox (1.88582pt too wide) in paragraph at lines 596--598
 []\T1/stix/m/n/10 The [][]\T1/zi4/m/n/10 \newproof []\T1/stix/m/n/10 com-mand d
 e-fines proof en-vi-ron-ments with
  []
 
-(./cas-dc-template.bbl [5]) [6
+[5] (./cas-dc-template.bbl) [6
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 640.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 640.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 656.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 656.
  (./cas-dc-template.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 640.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 640.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 656.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 656.
 Package rerunfilecheck Info: File `cas-dc-template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33927 strings out of 483057
- 764419 string characters out of 5962300
- 1139905 words of memory out of 5000000
+ 33932 strings out of 483057
+ 764470 string characters out of 5962300
+ 1141905 words of memory out of 5000000
  48205 multiletter control sequences out of 15000+600000
  653928 words of font info for 180 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 63i,19n,98p,856b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,17n,98p,856b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/georg/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc0900.600
 pk> </home/georg/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0900.60
 0pk> </home/georg/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx0900.6
@@ -1436,10 +1436,10 @@ stix/stix-mathit.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/sti
 x-mathrm-bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-m
 athrm.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathscr.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on cas-dc-template.pdf (7 pages, 658981 bytes).
+Output written on cas-dc-template.pdf (7 pages, 825797 bytes).
 PDF statistics:
- 414 PDF objects out of 1000 (max. 8388607)
- 273 compressed objects within 3 object streams
- 89 named destinations out of 1000 (max. 500000)
+ 419 PDF objects out of 1000 (max. 8388607)
+ 279 compressed objects within 3 object streams
+ 94 named destinations out of 1000 (max. 500000)
  63 words of extra memory for PDF output out of 10000 (max. 10000000)
 

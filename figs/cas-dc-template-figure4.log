@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.26)  4 MAY 2021 11:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.26)  4 MAY 2021 13:19
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1282,20 +1282,20 @@ The command '\includegraphics [scale=.75]{figs/roughsurf.png}' has been optimiz
 ed away. Use '/tikz/external/optimize=false' to disable this.
 
 Package natbib Warning: Citation `willner2013kontinuums' on page 2 undefined on
- input line 217.
+ input line 218.
 
 
-LaTeX Warning: Reference `fig:design' on page 2 undefined on input line 234.
+LaTeX Warning: Reference `fig:design' on page 2 undefined on input line 235.
 
 
-LaTeX Warning: Reference `fig:teeth' on page 2 undefined on input line 234.
+LaTeX Warning: Reference `fig:teeth' on page 2 undefined on input line 235.
 
 
-LaTeX Warning: Reference `fig:roughsurf' on page 2 undefined on input line 234.
+LaTeX Warning: Reference `fig:roughsurf' on page 2 undefined on input line 235.
 
 
 
-Overfull \hbox (0.60149pt too wide) in paragraph at lines 234--241
+Overfull \hbox (0.60149pt too wide) in paragraph at lines 235--242
 []\T1/stix/m/n/10 Finally, dy-namic sys-tem equa-tions are ob-tained in a MBS
  []
 
@@ -1321,59 +1321,59 @@ PGFPlots: reading {ASCII/RandomIcMount2000.txt}
 The command '\includegraphics [scale=.75]{figs/Fig1.pdf}' has been optimized aw
 ay. Use '/tikz/external/optimize=false' to disable this.
 
-Overfull \hbox (1.47052pt too wide) in paragraph at lines 329--430
+Overfull \hbox (1.47052pt too wide) in paragraph at lines 368--434
 \T1/stix/m/n/10 Main ran-dom-ness con-trib-u-tors: plate mount ori-en-ta-tion (
 nor-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 329--430
+Underfull \hbox (badness 10000) in paragraph at lines 368--434
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--432
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
 
  []
 
 
-Overfull \hbox (4.1505pt too wide) in paragraph at lines 442--445
+Overfull \hbox (4.1505pt too wide) in paragraph at lines 446--449
 \T1/stix/m/n/10 Friction co-ef-fi-cient be-tween plates and plate car-ri-ers: s
 tochas-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 442--445
+Underfull \hbox (badness 10000) in paragraph at lines 446--449
 
  []
 
 
-Overfull \hbox (5.5355pt too wide) in paragraph at lines 457--459
+Overfull \hbox (5.5355pt too wide) in paragraph at lines 461--463
 []\T1/stix/m/n/10 This class de-pends on the fol-low-ing pack-ages for its prop
 er
  []
 
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 488.
+(Font)              scaled to size 8.50006pt on input line 492.
 The command '\includegraphics [scale=.75]{figs/Fig1.pdf}' has been optimized aw
 ay. Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Reference `tbl1' on page 3 undefined on input line 503.
+LaTeX Warning: Reference `tbl1' on page 3 undefined on input line 507.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--506
+Underfull \hbox (badness 10000) in paragraph at lines 491--510
 []\T1/stix/m/n/10 Figures may be in-cluded us-ing the com-mand,
  []
 
 \c@theorem=\count352
 
-Overfull \hbox (5.35553pt too wide) in paragraph at lines 575--580
+Overfull \hbox (5.35553pt too wide) in paragraph at lines 579--584
 []\T1/stix/m/n/10 com-mands au-to-mat-i-cally de-fine coun-ters for the en-vi-r
 on-ments
  []
 
 
-Overfull \hbox (1.88582pt too wide) in paragraph at lines 581--583
+Overfull \hbox (1.88582pt too wide) in paragraph at lines 585--587
 []\T1/stix/m/n/10 The [][]\T1/zi4/m/n/10 \newproof []\T1/stix/m/n/10 com-mand d
 e-fines proof en-vi-ron-ments with
  []
@@ -1383,10 +1383,10 @@ No file figs/cas-dc-template-figure4.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 641.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 641.
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 641.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 641.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 645.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 645.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 645.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 645.
 
 LaTeX Warning: There were undefined references.
 
@@ -1394,11 +1394,11 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  36188 strings out of 483057
  822331 string characters out of 5962300
- 2069885 words of memory out of 5000000
+ 2072075 words of memory out of 5000000
  50573 multiletter control sequences out of 15000+600000
  653885 words of font info for 180 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 65i,19n,100p,901b,2079s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,17n,100p,901b,2079s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/georg/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0900.600
 pk></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb>
