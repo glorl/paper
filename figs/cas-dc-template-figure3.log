@@ -952,7 +952,7 @@ oupplots.code.tex
 zlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))
-No file figs/cas-dc-template-figure2.aux.
+No file figs/cas-dc-template-figure3.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
 LaTeX Font Info:    ... okay on input line 43.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
@@ -1075,7 +1075,7 @@ le}
 \creditauthor{Data curation, Writing - Original draft preparation}{Mingan Jiang
 }
 \verbatim@out=\write5
-\openout5 = `figs/cas-dc-template-figure2.abs'.
+\openout5 = `figs/cas-dc-template-figure3.abs'.
 
 LaTeX Font Info:    Trying to load font information for TS1+stix on input line 
 132.
@@ -1136,7 +1136,7 @@ Overfull \hbox (123.62721pt too wide) detected at line 142
 []
  []
 
-(./figs/cas-dc-template-figure2.abs
+(./figs/cas-dc-template-figure3.abs
 LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/inconsolata/t1zi4.fd
@@ -1303,29 +1303,19 @@ A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
-\openout4 = `figs/cas-dc-template-figure2.dpth'.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+The command '\includegraphics [scale=.75]{figs/Fig1.pdf}' has been optimized aw
+ay. Use '/tikz/external/optimize=false' to disable this.
+\openout4 = `figs/cas-dc-template-figure3.dpth'.
 
-PGFPlots: reading {ASCII/badclutchk2.txt}
+PGFPlots: reading {ASCII/RandomIcMount2000.txt}
 \tikzexternal@dep@file=\write6
-\openout6 = `figs/cas-dc-template-figure2.dep'.
+\openout6 = `figs/cas-dc-template-figure3.dep'.
 
-PGFPlots: reading {ASCII/badclutchk2.txt}
-PGFPlots: reading {ASCII/badclutchk2.txt}
-PGFPlots: reading {ASCII/badclutchk2.txt}
-PGFPlots: reading {ASCII/badclutchk2.txt}
-PGFPlots: reading {ASCII/badclutchk2.txt}
-PGFPlots: reading {ASCII/badclutchk2.txt}
-PGFPlots: reading {ASCII/badclutchk2.txt}
-PGFPlots: reading {ASCII/badclutchk2.txt}
-PGFPlots: reading {ASCII/badclutchk2.txt}
-PGFPlots: reading {ASCII/badclutchk2.txt}
 [2
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-The command '\includegraphics [scale=.75]{figs/Fig1.pdf}' has been optimized aw
-ay. Use '/tikz/external/optimize=false' to disable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
 The command '\includegraphics [scale=.75]{figs/Fig1.pdf}' has been optimized aw
 ay. Use '/tikz/external/optimize=false' to disable this.
 
@@ -1386,7 +1376,7 @@ Overfull \hbox (1.88582pt too wide) in paragraph at lines 542--544
 e-fines proof en-vi-ron-ments with
  []
 
-No file figs/cas-dc-template-figure2.bbl.
+No file figs/cas-dc-template-figure3.bbl.
 \csxdef{lastpage}{4}
 
 Package natbib Warning: There were undefined citations.
@@ -1400,19 +1390,19 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 34300 strings out of 483057
- 776243 string characters out of 5962300
- 1167236 words of memory out of 5000000
- 48685 multiletter control sequences out of 15000+600000
+ 36187 strings out of 483057
+ 822303 string characters out of 5962300
+ 2069764 words of memory out of 5000000
+ 50572 multiletter control sequences out of 15000+600000
  653885 words of font info for 180 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 65i,19n,100p,901b,2103s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,19n,100p,901b,2079s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/georg/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0900.600
 pk></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb>
-Output written on figs/cas-dc-template-figure2.pdf (1 page, 15267 bytes).
+Output written on figs/cas-dc-template-figure3.pdf (1 page, 179475 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
+ 29 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)

@@ -260,6 +260,46 @@ Boundary conditions. piston is pushed in axial direction by hydraulics. close to
 
 \section{Verification with measurements}
 \subsection{Operation conditions}
+\begin{figure}
+	\centering
+	\begin{tikzpicture}[scale=1]
+	\begin{axis}[xlabel=$t$ (s),ylabel=$n$ (rpm),
+	scale = 0.38,
+	width=\textwidth,
+%	xtick={0,0.5,1}, 
+	grid=major,
+	every axis y label/.style={at={(-0.15,0.5)},rotate=90}, 
+	every axis x label/.style={at={(0.5,-0.25)}},
+	xmin=-0.5,xmax=5,
+	axis y line*=left,
+	ymin=-10,ymax=120,
+	height = 0.5\textwidth,
+	width = 0.9\textwidth,
+	%legend style={at={(0.15,0.03)},anchor=south west}, 
+	%legend cell align=left, 
+	]
+	\addplot [domain=0:5, samples=100,line width=2,black,solid]{0*x+105};
+	\addplot [domain=0:5, samples=100,line width=2,black,dashed]{0*x+0};
+	\end{axis}
+	\begin{axis}[
+	scale = 0.38,
+	width=\textwidth,
+%	grid=major,
+	every axis y label/.style={at={(1.15,0.5)},rotate=90}, 
+	xmin=-0.5,xmax=5,
+	axis y line*=right,
+	axis x line=none,
+	ylabel=$u_{piston}$ (m),
+	ymin=-0.1,ymax=1.2,
+	height = 0.5\textwidth,
+	width = 0.9\textwidth,
+	]
+	\addplot [gray,line width=2] coordinates { (0,0) (0.1,1) (5,1) };
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Operation conditions.}
+	\label{fig:opcond}
+\end{figure}
 \subsection{Time-domain vs. frequency domain analysis}
 
 Clear: single simulation not reasonable. Many simulations because of spread and because many parameters can't be measured, are random. \\
