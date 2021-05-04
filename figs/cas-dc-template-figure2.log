@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.26)  4 MAY 2021 10:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.26)  4 MAY 2021 11:34
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1305,23 +1305,25 @@ A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 \openout4 = `figs/cas-dc-template-figure2.dpth'.
 
-PGFPlots: reading {ASCII/badclutchk2.txt}
+PGFPlots: reading {ASCII/goodclutchk2.txt}
 \tikzexternal@dep@file=\write6
 \openout6 = `figs/cas-dc-template-figure2.dep'.
 
-PGFPlots: reading {ASCII/badclutchk2.txt}
-PGFPlots: reading {ASCII/badclutchk2.txt}
-PGFPlots: reading {ASCII/badclutchk2.txt}
-PGFPlots: reading {ASCII/badclutchk2.txt}
-PGFPlots: reading {ASCII/badclutchk2.txt}
-PGFPlots: reading {ASCII/badclutchk2.txt}
-PGFPlots: reading {ASCII/badclutchk2.txt}
-PGFPlots: reading {ASCII/badclutchk2.txt}
-PGFPlots: reading {ASCII/badclutchk2.txt}
-PGFPlots: reading {ASCII/badclutchk2.txt}
+PGFPlots: reading {ASCII/goodclutchk2.txt}
+PGFPlots: reading {ASCII/goodclutchk2.txt}
+PGFPlots: reading {ASCII/goodclutchk2.txt}
+PGFPlots: reading {ASCII/goodclutchk2.txt}
+PGFPlots: reading {ASCII/goodclutchk2.txt}
+PGFPlots: reading {ASCII/goodclutchk2.txt}
+PGFPlots: reading {ASCII/goodclutchk2.txt}
+PGFPlots: reading {ASCII/goodclutchk2.txt}
+PGFPlots: reading {ASCII/goodclutchk2.txt}
+PGFPlots: reading {ASCII/goodclutchk2.txt}
 [2
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 The command '\includegraphics [scale=.75]{figs/Fig1.pdf}' has been optimized aw
 ay. Use '/tikz/external/optimize=false' to disable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
@@ -1329,59 +1331,59 @@ isable this.
 The command '\includegraphics [scale=.75]{figs/Fig1.pdf}' has been optimized aw
 ay. Use '/tikz/external/optimize=false' to disable this.
 
-Overfull \hbox (1.47052pt too wide) in paragraph at lines 287--391
+Overfull \hbox (1.47052pt too wide) in paragraph at lines 329--430
 \T1/stix/m/n/10 Main ran-dom-ness con-trib-u-tors: plate mount ori-en-ta-tion (
 nor-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--391
+Underfull \hbox (badness 10000) in paragraph at lines 329--430
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--393
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
 
  []
 
 
-Overfull \hbox (4.1505pt too wide) in paragraph at lines 403--406
+Overfull \hbox (4.1505pt too wide) in paragraph at lines 442--445
 \T1/stix/m/n/10 Friction co-ef-fi-cient be-tween plates and plate car-ri-ers: s
 tochas-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--406
+Underfull \hbox (badness 10000) in paragraph at lines 442--445
 
  []
 
 
-Overfull \hbox (5.5355pt too wide) in paragraph at lines 418--420
+Overfull \hbox (5.5355pt too wide) in paragraph at lines 457--459
 []\T1/stix/m/n/10 This class de-pends on the fol-low-ing pack-ages for its prop
 er
  []
 
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 449.
+(Font)              scaled to size 8.50006pt on input line 488.
 The command '\includegraphics [scale=.75]{figs/Fig1.pdf}' has been optimized aw
 ay. Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Reference `tbl1' on page 3 undefined on input line 464.
+LaTeX Warning: Reference `tbl1' on page 3 undefined on input line 503.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--467
+Underfull \hbox (badness 10000) in paragraph at lines 487--506
 []\T1/stix/m/n/10 Figures may be in-cluded us-ing the com-mand,
  []
 
 \c@theorem=\count352
 
-Overfull \hbox (5.35553pt too wide) in paragraph at lines 536--541
+Overfull \hbox (5.35553pt too wide) in paragraph at lines 575--580
 []\T1/stix/m/n/10 com-mands au-to-mat-i-cally de-fine coun-ters for the en-vi-r
 on-ments
  []
 
 
-Overfull \hbox (1.88582pt too wide) in paragraph at lines 542--544
+Overfull \hbox (1.88582pt too wide) in paragraph at lines 581--583
 []\T1/stix/m/n/10 The [][]\T1/zi4/m/n/10 \newproof []\T1/stix/m/n/10 com-mand d
 e-fines proof en-vi-ron-ments with
  []
@@ -1391,26 +1393,26 @@ No file figs/cas-dc-template-figure2.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 602.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 602.
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 602.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 602.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 641.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 641.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 641.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 641.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 34300 strings out of 483057
- 776243 string characters out of 5962300
- 1167236 words of memory out of 5000000
- 48685 multiletter control sequences out of 15000+600000
+ 34287 strings out of 483057
+ 776019 string characters out of 5962300
+ 1163634 words of memory out of 5000000
+ 48672 multiletter control sequences out of 15000+600000
  653885 words of font info for 180 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 65i,19n,100p,901b,2103s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,19n,100p,901b,2101s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/georg/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0900.600
 pk></usr/share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb>
-Output written on figs/cas-dc-template-figure2.pdf (1 page, 15267 bytes).
+Output written on figs/cas-dc-template-figure2.pdf (1 page, 15036 bytes).
 PDF statistics:
  32 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream

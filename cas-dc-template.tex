@@ -302,6 +302,29 @@ Boundary conditions. piston is pushed in axial direction by hydraulics. close to
 \end{figure}
 \subsection{Time-domain vs. frequency domain analysis}
 
+\begin{figure}
+	\centering
+	\begin{tikzpicture}[scale=1]
+	\begin{axis}[xlabel=$t$ (s),ylabel=$n$ (rpm),
+	scale = 0.43,
+	width=\textwidth,
+	%	xtick={0,0.5,1}, 
+	grid=major,
+	every axis y label/.style={at={(-0.15,0.5)},rotate=90}, 
+	every axis x label/.style={at={(0.5,-0.25)}},
+	xmin=-0,xmax=5,
+	ymin=-5,ymax=30,
+	%legend style={at={(0.15,0.03)},anchor=south west}, 
+	%legend cell align=left, 
+	]
+	\addplot[] table[x expr=\thisrowno{0},y expr=(\thisrowno{1})] {ASCII/output1k.txt};
+%	\addplot[] table[x expr=\thisrowno{0},y expr=(\thisrowno{4})] {ASCII/output1k.txt};
+%	\addplot[] table[x expr=\thisrowno{0},y expr=(\thisrowno{6})] {ASCII/output1k.txt};
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Operation conditions.}
+	\label{fig:timedomain}
+\end{figure}
 Clear: single simulation not reasonable. Many simulations because of spread and because many parameters can't be measured, are random. \\
 stochastic influences from surface distributions are obvious. Main randomness contributors: plate mount orientation (normal distribution), initial conditions (Gaussisan distribution), friction coefficient (Gaussian distribution). In addition, material inhomogeneity, ... \\
 \begin{figure}
@@ -316,9 +339,6 @@ every axis y label/.style={at={(-0.2,0.5)},rotate=90},
 every axis x label/.style={at={(0.5,-0.15)}},
 xmin=0,xmax=1,
 ymin=-60,ymax=60,
-%height = 1.0\textwidth,
-%legend style={at={(0.15,0.03)},anchor=south west}, 
-%legend cell align=left, 
 ]
 \addplot[] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{1})*1000] {ASCII/goodclutchk2.txt};
 \addplot[] table[x expr=\thisrowno{0}/36,y expr=(\thisrowno{3})*1000] {ASCII/goodclutchk2.txt};

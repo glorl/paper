@@ -1,11 +1,1 @@
-figs/cas-dc-template-figure1.pdf: ASCII/goodclutchk2.txt
-figs/cas-dc-template-figure1.pdf: ASCII/goodclutchk2.txt
-figs/cas-dc-template-figure1.pdf: ASCII/goodclutchk2.txt
-figs/cas-dc-template-figure1.pdf: ASCII/goodclutchk2.txt
-figs/cas-dc-template-figure1.pdf: ASCII/goodclutchk2.txt
-figs/cas-dc-template-figure1.pdf: ASCII/goodclutchk2.txt
-figs/cas-dc-template-figure1.pdf: ASCII/goodclutchk2.txt
-figs/cas-dc-template-figure1.pdf: ASCII/goodclutchk2.txt
-figs/cas-dc-template-figure1.pdf: ASCII/goodclutchk2.txt
-figs/cas-dc-template-figure1.pdf: ASCII/goodclutchk2.txt
-figs/cas-dc-template-figure1.pdf: ASCII/goodclutchk2.txt
+figs/cas-dc-template-figure1.pdf: ASCII/output1k.txt
